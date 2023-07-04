@@ -1,0 +1,407 @@
+*{
+    text-decoration: none;
+    box-sizing: border-box;  
+    font-family:'Quicksand', sans-serif;
+}
+html,body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #095b91;
+}
+
+a:link {
+    color : #fff;
+}
+
+
+
+.bg-color {
+    position: relative;
+    background-color: #045185; 
+    overflow: hidden;
+  }
+  
+  .bg-color::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgba(200, 200, 200, 0.1) 25%, transparent 25%, transparent 50%, rgba(200, 200, 200, 0.1) 50%, rgba(200, 200, 200, 0.1) 75%, transparent 75%);
+    background-size: 500px 500px; /*bar sizes*/
+   
+   
+  }
+
+p { 
+    max-width: 75ch 
+}
+h1 {
+    margin: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 70px;
+    margin-top: 0;
+    padding: 20px 40px;
+    position: absolute;
+    cursor: default;
+    color: #fff;
+}
+.menu li a p {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: #2596be ;
+    position: relative;
+    z-index: 1;
+}
+nav ul  {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul li a {
+   text-transform: uppercase;
+   padding: 7px 13px;
+   font-size: 18px;
+   border-radius: 3px;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+  }
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+@media screen and (max-width : 1256px) {
+    h1{
+        padding-left: 10px;
+    }
+    nav ul li a{
+        font-size: 15px;
+        padding: 15px 15px;
+    }
+    .menu li a p {
+        display: none;
+
+    }
+    .menu li i {
+        font-size: 1.4em;
+    }
+    nav ul li a.active {
+        color: #fff;
+        background-color: #2596be;
+    }
+}
+
+@media screen and (max-width : 859px) {
+     .checkbtn{
+        display: block;
+     }
+     .menu li a p {
+        display: none;
+
+    }
+     nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #095b92;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        color: #fff;
+}
+    nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    }
+     nav ul li a{
+    font-size: 20px;
+     }
+  nav li a:hover , nav li a.active {
+    background: none;
+    color: #ffff;
+   }
+   #check:checked ~ ul{
+    left: 0;
+
+   }
+
+   .main-container-flex {
+    flex-direction: column;
+   }
+   .flex-item {
+    max-width: 400px;
+   }
+    
+   
+}
+
+@media screen and (max-width : 468px){
+    h1 {
+        margin-bottom: 0;
+        max-width: 75ch;
+        right: 15%;
+        bottom: 35%;
+        transition: .2s;
+        margin-left: 10px;
+        transition: .5s;
+        
+}
+}
+nav li a.active, nav li a:hover{
+    background-color: #095b91;
+    transition-duration: 0.5s;
+
+}
+
+
+
+@media (max-width : 404px) {
+h1 {
+   margin-left: 10px;
+   font-size: 28px;
+   max-width: 75ch;
+   right: 15%;
+   bottom: 25%;
+   transition: .1s ease;
+   
+ 
+}
+}
+
+.main-container-flex {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+
+ 
+}
+.flex-item {
+    padding: 15px;
+    margin-top: 5%;
+    
+    
+}
+.flex-item li {
+    list-style: none;
+    padding: 10px 0 ;
+}
+
+
+.pie-pagina {
+    width: 100%;
+    background-color: #2596be; 
+  
+    margin-top: auto;  
+} 
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 25px 0;
+    margin: auto;
+
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items : left;
+   
+}
+
+
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+    cursor: default; 
+   
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+   
+    
+}
+
+.pie-pagina .grupo-1 .box .contacto-footer a{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-right: 5px;
+    background-color: #02759e ;
+    text-align: center;
+    border-radius: 3px;
+    transition: all 0.5s ease ;
+ 
+}
+.pie-pagina .grupo-1 .box .contacto-footer p{
+    text-align: center;
+}
+.pie-pagina .grupo-1 .box .contacto-footer i{
+    padding: auto;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-right: 5px;
+    background-color: #02759e ;
+    text-align: center;
+    border-radius: 3px;
+    transition: all 0.5s ease ;
+ 
+}
+
+.pie-pagina .grupo-1 .red-social a:hover{
+    background-color: #095b91;
+    transition-duration: 0.5s;
+}
+.pie-pagina .grupo-1 .box .contacto-footer a:hover {
+    background-color: #095b91;
+    transition-duration: 0.5s;
+}
+
+   
+.pie-pagina .grupo-2 {
+    background-color: #02759e;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+    
+    
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+   
+}
+
+/* Fin footer */
+a:visited {
+    color: white;
+    display: block;
+}
+
+
+
+#menuRedes ul li a:hover {
+    transition-duration: 0.5s;
+    background-color: #2596be;
+}
+
+
+
+
+@media screen and (max-width : 858px) {
+
+    .pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1,fr);
+    grid-gap: 30px;
+    padding: 5px 0px;
+}
+.pie-pagina .grupo-1 .box figure img {
+    width: 100%;
+    height: 100%;
+    cursor: default; 
+    
+}
+ .pie-pagina .grupo-1 .box {
+    margin-top: 15px;
+    
+ }
+ 
+ }
+
+ @media screen and (max-width : 450px) {
+     .pie-pagina .grupo-1 {
+        width: 100%;
+        grid-template-columns: repeat(1,fr);
+        gap : 20px
+     }
+     .pie-pagina .grupo-1 .box figure img {
+        width: 90%;
+        height: 90%;
+        cursor: default; 
+        
+    } 
+    
+ }
+
+
+
+@media (max-width: 360px) {
+    .pie-pagina .grupo-1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    h1 {  
+        
+        max-width: 75ch;
+      
+        right: 15%;
+        bottom: 25%;
+    }
+    .pie-pagina .grupo-1 .box figure img {
+        grid-column: 1 / 2;
+    }
+    .pie-pagina .grupo-1 .box {
+      margin-bottom: 20px;
+    }
+    
+    .pie-pagina .grupo-2 {
+      text-align: center;
+    }
+  }
+
