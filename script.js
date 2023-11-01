@@ -108,7 +108,7 @@ btnShow.forEach((btn, index) => {
       
       setTimeout(() => {
         answer.classList.remove("visible");
-      }, 500); 
+      }, 499); 
     }
   });
 });
