@@ -2,6 +2,7 @@
     text-decoration: none;
     box-sizing: border-box;  
 }
+
 :root {
     --borderW : 3px;
     --borderS : solid;
@@ -9,8 +10,8 @@
 }
 
 body {
-     min-height: 100vh;
      background-color: #F5F5F5;
+     margin: 0;
 }
 
 a:link {
@@ -23,17 +24,15 @@ p {
    background-color: #F5F5F5; 
    color: #000000;
 }
-.bg-color {
-    width: 100%;
-  }
-nav {
+
+header {
     background-color: #c5c2c2;
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 80px;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    
     font-family:'Quicksand', sans-serif;
 }
 nav ul  {
@@ -100,14 +99,21 @@ nav li a p {
   
   .flexTreatments {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     padding: 0 10px;
     margin : 0 200px;
+    gap: 5%;
+    flex-wrap: wrap;
 
   }
   .treatmentsItems{
     display: flex;
     padding: 10px;
+    margin: 0 10px;
+    max-width: 300px;
+    flex-grow: 1;
+   
   }
   .treatmentsInfo {
     display: flex;
@@ -180,6 +186,10 @@ nav li a p {
     
 }
 
+.flexContainer {
+    width: 100%;
+}
+
 .fulImg span:hover {
     transition-duration: 1s;
     transition-delay: .1s;
@@ -236,6 +246,7 @@ nav li a p {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 #staff h3 , #faq h3 , #contact h3 {
     font-family: 'Poppins', sans-serif;
@@ -249,9 +260,17 @@ nav li a p {
    justify-content: center;
    align-items: center;
    flex-direction: row;
-   gap:80px;
+   gap: 5%;
    margin-bottom: 35px;
+   flex-wrap: wrap;
 
+
+}
+
+.staffFlex .flex-item {
+    max-width: 370px;
+    padding:  3% 0;
+    flex-basis: 1;
 }
 
 .staffFlex .flex-item img {
@@ -288,16 +307,26 @@ nav li a p {
    padding:10px 20px;
    overflow: hidden;
    max-height: 70px;
-   transition: max-height 0.5s ease-in-out ;
+   transition: max-height 0.5s ease;
+   -webkit-transition: max-height 0.5s ease;
+   -moz-transition: max-height 0.5s ease;
+   -ms-transition: max-height 0.5s ease;
+   -o-transition: max-height 0.5s ease;
 }
  .faq .faqSons .answer {
-    display: none;
-    
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .4s ease;
+    -webkit-transition: max-height .4s ease;
+    -moz-transition: max-height .4s ease;
+    -ms-transition: max-height .4s ease;
+    -o-transition: max-height .4s ease;
 }
-.faq .faqSons.answer:last-child {
-    float: none;
-    background-color: #02759e;
+.faq .answer p {
+    padding: .5rem 0;
+    line-height: 1.6;
 }
+
 
 .faq .faqSons h4 {
   color: #095b91;
@@ -327,10 +356,24 @@ nav li a p {
 }
 
 .faq .faqSons .answer.visible {
-    display: block;
-    padding : 10px 0;
-     
+    max-height: 180px;
+    animation: fade .4s ease-in;
+    -webkit-animation: fade .4s ease;
 }
+.faq .visiFaq{
+    max-height: 180px;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translate(-10px);
+}
+to {
+    opacity: 1;
+    transition: translateY(0);
+}
+}
+
   
 .fulImg {
     width: 100%;
@@ -371,15 +414,23 @@ nav li a p {
     border-radius: 10px;
     
 }
-#contact {
+#menuRedes legend{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    border: var(--borderW) var(--borderS) var(--borderC);
+    background-color: #01CFC9;
+    font-weight: bold;
 }
 .flexMenu{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .contactGeneral ul li {
@@ -611,91 +662,8 @@ nav li a p {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Inicio responsive menu */
-@media (max-width : 1102px) {
-    h1{
-        padding-left: 10px;
-    }
-    nav ul li a{
-        font-size: 15px;
-        padding: 15px 15px;
-    }
-    nav ul li a p {
-        display: none;
 
-    }
-    nav li i {
-        font-size: 1.4em;
-    }
-    .left {
-        left : 15px;
-    }
-    .right {
-        right: 15px;
-    }
-    nav ul li a.active {
-        color: #fff;
-        background-color: #2596be;
-    }
-    .treatmentsItems {
-      flex-wrap: wrap;
-      margin: 0;
 
-    }
-  }
-
-@media (max-width : 800px) {
-     .checkbtn{
-        display: block;
-     }
-     nav ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #095b92;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-        color: #fff;
-}
-
-    nav ul li{
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-    }
-     nav ul li a{
-    font-size: 20px;
-     }
-   nav li a.active {
-    background-color: none;
-   }
-   #check:checked ~ ul{
-    left: 0;
-    
-   }
-    #check:checked ~ #gallery {
-        display: none;
-    }
-    .left {
-        left : 25px;
-    }
-    .right{
-        right: 25px;
-    }
-}
-
-@media screen and (max-width : 385px) {
-       .gallerygoDent img {
-        width: 500%;
-        height: 100vh;
-       }    
-}
- main  {
-    font-size: 20px;
-    color: #fff;
-}
 .text {
     padding : 0;
     text-align: center;
@@ -748,7 +716,7 @@ main h2 {
 }
 
 
-/* Fin footer */
+
 a:visited {
     color: white;
     display: block;
@@ -759,10 +727,97 @@ a:visited {
 #menuRedes ul li:hover {
     transition-duration: 0.5s;
     background-color: #01CFC9;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
+/* Responsive section */
 
+@media (max-width : 1095px) {
+    .text h2 , .text p {
+        max-width: 75ch;
+    }
+    header {
+        width: 100%;
+    }
 
+}
+@media (max-width : 1102px) {
+ 
+    nav ul li a{
+        font-size: 15px;
+        padding: 15px 15px;
+    }
+    nav ul li a p {
+        display: none;
+
+    }
+    nav li i {
+        font-size: 1.4em;
+    }
+    .left {
+        left : 15px;
+    }
+    .right {
+        right: 15px;
+    }
+    nav ul li a.active {
+        color: #fff;
+        background-color: #2596be;
+    }
+  }
+
+@media (max-width : 800px) {
+     .checkbtn{
+        display: block;
+     }
+     nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #095b92;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        color: #fff;
+}
+
+    nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    }
+     nav ul li a{
+    font-size: 20px;
+     }
+   nav li a.active {
+    background-color: none;
+   }
+   #check:checked ~ ul{
+    left: 0;
+    
+   }
+    #check:checked ~ #gallery {
+        display: none;
+    }
+    .left {
+        left : 25px;
+    }
+    .right{
+        right: 25px;
+    }
+}
+
+@media screen and (max-width : 385px) {
+       .gallerygoDent img {
+        width: 500%;
+        height: 100vh;
+       }    
+}
 
 /* Inicio responsive footer */
 @media screen and (max-width : 858px) {
@@ -826,4 +881,10 @@ a:visited {
       text-align: center;
     }
   }
+
+
+
+
+
+
 
