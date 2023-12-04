@@ -47,20 +47,6 @@ function closeImg() {
   fulImgBox.style.display = "none";
 }
 
-// No gallery
-
-window.addEventListener('DOMContentLoaded', function () {
-  var check = document.getElementById('check');
-  var gallery = document.querySelector('.gallery');
-
-  check.addEventListener('change', function () {
-    if (this.checked) {
-      gallery.style.display = 'none';
-    } else {
-      gallery.style.display = 'block';
-    }
-  });
-});
 
 
 // Change active header 
@@ -85,36 +71,20 @@ vecHeader.forEach(headerElement => {
 
 
 // Show FAQ anwers 
-
+const faqs = document.querySelectorAll(".faqSons");
 const btnShow = document.querySelectorAll(".btnFaq");
 const answers = document.querySelectorAll(".answer");
-const cont = document.querySelectorAll(".faqSons");
 
 btnShow.forEach((btn, index) => {
   btn.addEventListener("click", () => {
-    const answer = answers[index];
-    const container = cont[index];
-
-    if (!answer.classList.contains("visible")) {
-      answer.classList.add("visible");
-      container.style.maxHeight = container.scrollHeight + "px";
-      container.style.transition = "max-height 0.5s ease-in-out";
-      btn.textContent = "-";
+    answers[index].classList.toggle("visible");
+    const faq = faqs[index];
+    if (faq.style.maxHeight === "180px") {
+      faq.style.maxHeight = null;
+      btn.textContent = "+"; // Cambiar el texto del botón a "Mostrar +"
     } else {
-      container.style.transition = "max-height 0.5s ease-in-out";
-      container.style.maxHeight = "70px"; 
-      btn.textContent = "+";
-
-      
-      setTimeout(() => {
-        answer.classList.remove("visible");
-      }, 499); 
+      faq.style.maxHeight = "180px";
+      btn.textContent = "-"; // Cambiar el texto del botón a "Ocultar -"
     }
   });
 });
-
-
-
-
- 
-
