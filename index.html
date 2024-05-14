@@ -31,11 +31,12 @@
   <meta name="distribution" content="global">
   <meta name="author" content="Luchini Dante">
   <meta name="copyright" content="Copyright Luchini Dante">
-  <title>goDent / Bienvenidos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <title> goDent</title>
 </head>
 
-<body>
-  <div id="mainSpa">
+<a>
+  <div class=fullContainer>
     <div class="fulImg" id="fulImgBox">
       <img src="gallery1.jpg" id="fulImg" alt="">
       <span onclick="closeImg()"><i class="fa-solid fa-x"></i></span>
@@ -47,11 +48,11 @@
       <header>
         <nav>
 
-          <input type=checkbox id=check>
+          <input type=checkbox id=check class="menuBtn">
           <label for=check class=checkbtn> <i class="fa-solid fa-bars"></i> </label>
           <a href=# class=enlace></a>
 
-          <ul>
+          <ul class = menu>
 
             <li> <a href=#mainSpa class=info id=homeHeader> <i class="fa-solid fa-house"></i>
                 <p> Inicio </p>
@@ -311,7 +312,6 @@
         </div>
       </div>
   </div>
-
   </div>
   </aside>
   </div>
@@ -325,63 +325,47 @@
             <img src="godentNofondo.png" alt="Logo goDent">
           </figure>
           <h4>Ofrecemos un servicio de calidad que cuenta con un personal con mas de 20 años de experiencia.</h4>
-          <div class="box">
-
-            <div class="red-social">
-              <a href="https://www.facebook.com/profile.php?id=100058823753792" target="_blank"
-                class="fa fa-facebook"></a>
-              <a href="https://www.instagram.com/grupogodent/" target="_blank" class="fa fa-instagram"></a>
-            </div>
+          <div class="box-social">
+            <ul class="red-social">
+              <li><a href="https://www.facebook.com/profile.php?id=100058823753792" target="_blank"
+                class="fa fa-facebook"></a></li>
+              <li><a href="https://www.instagram.com/grupogodent/" target="_blank" class="fa fa-instagram"></a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="box contact">
-        <div class=contacto-footer>
+      <aside class="box-contact">
           <h2> Contacto </h2>
           <div class="infoContacto">
             <ul>
               <li>
                 <div class="contUbi">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                    <path fill="#0C8989"
-                      d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 10q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Z" />
-                  </svg>
-                  <p> Camino Gral. Belgrano 2816, Manuel B. Gonnet
-                    Provincia
-                    de Buenos Aires. </p>
+                  <i class="ti ti-map-pin-filled"></i>
+                  <p> Camino Gral. Belgrano 2816, Manuel B. Gonnet, La Plata, Buenos Aires</p>
+                     </p>
                 </div>
               </li>
               <li>
                 <div class="contUbi">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
-                    <path fill="#0C8989"
-                      d="M13.95 4.24C11.86 1 7.58.04 4.27 2.05C1.04 4.06 0 8.44 2.09 11.67l.17.26l-.7 2.62l2.62-.7l.26.17c1.13.61 2.36.96 3.58.96c1.31 0 2.62-.35 3.75-1.05c3.23-2.1 4.19-6.39 2.18-9.71Zm-1.83 6.74c-.35.52-.79.87-1.4.96c-.35 0-.79.17-2.53-.52c-1.48-.7-2.71-1.84-3.58-3.15c-.52-.61-.79-1.4-.87-2.19c0-.7.26-1.31.7-1.75c.17-.17.35-.26.52-.26h.44c.17 0 .35 0 .44.35c.17.44.61 1.49.61 1.58c.09.09.05.76-.35 1.14c-.22.25-.26.26-.17.44c.35.52.79 1.05 1.22 1.49c.52.44 1.05.79 1.66 1.05c.17.09.35.09.44-.09c.09-.17.52-.61.7-.79c.17-.17.26-.17.44-.09l1.4.7c.17.09.35.17.44.26c.09.26.09.61-.09.87Z" />
-                  </svg>
+                  <i class="ti ti-brand-whatsapp"></i>
                   <p>221 507-7801</p>
                 </div>
               </li>
               <li>
-                <div class="contUbi"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                    viewBox="0 0 24 24">
-                    <path fill="#0C8989"
-                      d="M4 20q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4Zm8-7l8-5V6l-8 5l-8-5v2l8 5Z" />
-                  </svg>
+                <div class="contUbi">
+                  <i class="ti ti-mail-filled"></i>
                   <p>grupogodent@gmail.com</p>
                 </div>
               </li>
             </ul>
           </div>
-        </div>
-      </div>
+      </aside>
     </div>
     </div>
-
-    <div class="grupo-2">
-      <i class="fa-regular fa-copyright"></i> <span> 2023 goDent - Todos los derechos reservados</span>
-      <a href="https://github.com/dntluchini" target="_blank"> <span>Made by <span id=boldFooter>Dante Luchini</span>
-      </a>
-
+    <div class="contCreator">
+      <p id = 'portfolioHref'><a href="https://dntluchini.github.io/Portfolio/" target="_blank"> <span>Made by <span id=boldFooter>Dante Luchini</span></p></footer></a>
     </div>
+      
   </footer>
   <script src="script.js"></script>
   </div>

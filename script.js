@@ -48,28 +48,6 @@ function closeImg() {
 }
 
 
-
-// Change active header 
-
-const homeH = document.getElementById("homeHeader");
-const staffH = document.getElementById("staffHeader");
-const faqH = document.getElementById("faqHeader");
-const contactH = document.getElementById("contactHeader");
-const vecHeader = document.querySelectorAll(".info");
-
-
-vecHeader.forEach(headerElement => {
-  headerElement.addEventListener("click", () => {
-
-
-    vecHeader.forEach(btn => {
-      btn.classList.remove("active");
-    });
-    headerElement.classList.add("active");
-  });
-});
-
-
 // Show FAQ anwers 
 const faqs = document.querySelectorAll(".faqSons");
 const btnShow = document.querySelectorAll(".btnFaq");
@@ -88,3 +66,5 @@ btnShow.forEach((btn, index) => {
     }
   });
 });
+
+
