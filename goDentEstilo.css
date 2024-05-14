@@ -36,18 +36,10 @@ p {
 header {
     background-color: #c5c2c2;
     display: flex;
-<<<<<<< HEAD
     width: 100%;
     height: 80px;
     justify-content: center;
     align-items: center;
-=======
-    
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-
->>>>>>> 18f824bd57a8f71a878b7889a710aed7515b2b39
     font-family:'Quicksand', sans-serif;
     nav ul  {
         display: flex;
@@ -744,13 +736,6 @@ footer {
      h2 , p {
         font-size: 1em;
     }
-<<<<<<< HEAD
-=======
-
-    
-    
-
->>>>>>> 18f824bd57a8f71a878b7889a710aed7515b2b39
 }
 @media (max-width : 700px) {
  
